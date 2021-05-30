@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <div> Datum vydání: <span th:utext="${seznam.published}"></span></div>
+    <div> Titulek: <span th:utext="${seznam.title}"></span></div>
+    <div> Autor: <span th:utext="${seznam.autor}"></span></div>
+    <div th:utext="${seznam.perex}"></div>
+    <div th:utext="${seznam.body}"></div>
+</div>
+
+<a href="/">zpět na seznam</a>
+
+</body>
+</html>

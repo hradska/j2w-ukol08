@@ -7,6 +7,26 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-    <h1>Tady bude můj blog…</h1>
+<main class="container">
+    <h1>Seznam článků</h1>
+
+    <div th:each="clanek : ${seznam}">
+        <div>
+            <div>Autor: <span th:utext="${clanek.autor}">Jan</span></div>
+            <div>Titulek: <span th:utext="${clanek.title}">Hus</span></div>
+            <div>Datum vydání: <span th:utext="${#temporals.format(clanek.published, 'd. MMMM yyyy')}">1370</span></div>
+        </div>
+        <div>
+            <div>První odstavec:</div>
+            <div th:utext="${clanek.perex}">Hus</div>
+        </div>
+        <div>
+            <a th:href="@{/post/{slug}(slug=${clanek.slug})}">Celý článek</a>
+        </div>
+        <p>&nbsp;</p>
+
+    </div>
+
+</main>
 </body>
 </html>
