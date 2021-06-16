@@ -4,6 +4,10 @@ plugins {
     id 'java'
 }
 
+jar {
+    enabled = false
+}
+
 group = 'cz.czechitas.java2webapps'
 version = '1.0.0'
 
